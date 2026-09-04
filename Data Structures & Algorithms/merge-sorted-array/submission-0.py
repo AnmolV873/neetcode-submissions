@@ -1,7 +1,7 @@
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         x , y = m - 1, n - 1
-
+# merge from the back so that we can safely place values without losing / overwriting information
         for z in range( m + n - 1, -1, -1):
             if x < 0:
                 nums1[z] = nums2[y]
